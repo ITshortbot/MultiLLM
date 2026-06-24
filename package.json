@@ -1,0 +1,49 @@
+{
+  "name": "multi-llm-verifier",
+  "version": "1.0.0",
+  "description": "Multi-LLM Calculation Verification System",
+  "main": "electron.cjs",
+  "scripts": {
+    "dev": "concurrently \"vite --config vite.config.js\" \"wait-on http://localhost:5173 && electron .\"",
+    "build": "vite build && electron-builder",
+    "preview": "vite preview",
+    "electron": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.3",
+    "@google/generative-ai": "^0.15.0",
+    "dotenv": "^16.6.1",
+    "playwright": "^1.44.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "concurrently": "^8.2.2",
+    "electron": "^30.0.2",
+    "electron-builder": "^24.13.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^5.2.12",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.multillm.verifier",
+    "productName": "Multi-LLM Verifier",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "dist/**/*",
+      "electron.cjs",
+      "preload.cjs",
+      "server/**/*",
+      "workers/**/*",
+      "services/**/*",
+      "database/**/*",
+      "shared/**/*",
+      "node_modules/**/*"
+    ]
+  }
+}
