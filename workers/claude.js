@@ -46,7 +46,7 @@ async function queryClaude(question, onStatus) {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            model: 'llama-3.3-70b-specdec', // default robust Groq model
+            model: 'llama-3.3-70b-versatile', // default robust Groq model
             messages: [
               {
                 role: 'system',

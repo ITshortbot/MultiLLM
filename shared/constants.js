@@ -3,7 +3,7 @@
  */
 
 // ── LLM API Models ─────────────────────────────────────────────────────────────
-const GEMINI_MODEL  = process.env.GEMINI_MODEL  || 'gemini-1.5-flash';
+const GEMINI_MODEL  = process.env.GEMINI_MODEL  || 'gemini-2.5-flash';
 const CLAUDE_MODEL  = process.env.CLAUDE_MODEL  || 'claude-3-haiku-20240307';
 
 // ── Pricing (USD per 1M tokens) ────────────────────────────────────────────────
