@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "concurrently \"vite --config vite.config.js\" \"wait-on http://localhost:5173 && electron .\"",
     "build": "vite build && electron-builder",
+    "build:web": "vite build",
     "preview": "vite preview",
     "electron": "electron ."
   },

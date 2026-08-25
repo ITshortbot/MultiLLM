@@ -7,7 +7,10 @@
 const path = require('path');
 const fs = require('fs');
 
-const DB_DIR = path.join(__dirname, '..', '..', 'database');
+// Vercel's project filesystem is read-only; /tmp is writable but instance-local.
+const DB_DIR = process.env.VERCEL
+  ? '/tmp/multi-llm-verifier'
+  : path.join(__dirname, '..', '..', 'database');
 const DB_PATH = path.join(DB_DIR, 'history.json');
 
 function ensureDb() {

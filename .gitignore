@@ -3,5 +3,6 @@ dist/
 dist-electron/
 browser-profile/
 database/history.json
+database/history-*.json
 *.log
 .env
